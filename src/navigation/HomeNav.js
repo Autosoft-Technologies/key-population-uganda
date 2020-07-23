@@ -11,13 +11,13 @@ import About from "../modules/About";
 import ProfileScreen from "../modules/Profile/ProfileScreen";
 import Profile from "../modules/Profile";
 import PostDetails from "../modules/details/PostDetails";
-import Obulamu from "../modules/Obulamu";
 import Mixrl from "../modules/soundcloud/Mixrl";
 import Posts from "../modules/Posts";
 import Articles from "../modules/Articles";
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Blogs from "../modules/Blogs";
 import News from "../modules/News";
+import Centres from "../modules/Centres";
 
 const Stack = createStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -59,7 +59,7 @@ export default class HomeNav extends Component {
                             iconName = focused ? 'md-home' : 'md-home';
                         } else if (route.name === 'Centres') {
                             iconName = focused ? 'md-medkit' : 'ios-medkit';
-                        } else if (route.name === 'Profile') {
+                        } else if (route.name === 'Personal') {
                             iconName = focused ? 'ios-person' : 'md-person';
                         } else if (route.name === 'About') {
                             iconName = focused ? 'md-globe' : 'ios-globe';
@@ -76,14 +76,13 @@ export default class HomeNav extends Component {
                 }}
             >
                 <BottomTabs.Screen name="Home" children={this.createTopTabs}/>
-                <BottomTabs.Screen name="Centres" component={Posts}/>
-                <BottomTabs.Screen name="About" component={About}/>
+                <BottomTabs.Screen name="Centres" component={Centres}/>
+                {/*<BottomTabs.Screen name="About" component={About}/>*/}
                 <BottomTabs.Screen name="Contact" component={Contact}/>
-                <BottomTabs.Screen name="Profile" component={Profile}/>
+                <BottomTabs.Screen name="Personal" component={Profile}/>
             </BottomTabs.Navigator>
         )
     };
-
 
     // ------------------------------------------ Main/Drawer Navigation bars
     render() {

@@ -28,9 +28,9 @@ export default class BlogComponent extends Component {
     }
 
     render() {
-        const {blog, blog: {title, excerpt, better_featured_image, date}, onOpen} = this.props;
+        const {blog, blog: {title, excerpt, _embedded, date}, onOpen} = this.props;
         const someText = excerpt.rendered.replace(/(\r\n|\n|\r)/gm, "");
-        const titleHtml = "<div style='color:#663399; font-size:18px; font-weight: bold; padding-top: 10px'>" + title.rendered + "</div>";
+        const titleHtml = "<div style='color:#252525; font-size:18px; font-weight: bold; padding-top: 10px'>" + title.rendered + "</div>";
         return (
             <View>
                 {/*<View style={styles.imageContainer}>*/}
@@ -38,7 +38,7 @@ export default class BlogComponent extends Component {
                 {/*</View>*/}
                 <TouchableOpacity style={styles.container} onPress={() => onOpen(blog)}>
                     <View style={styles.imageContainer}>
-                        <Image source={{uri: better_featured_image.source_url}} style={styles.image}/>
+                        <Image source={{uri: _embedded['wp:featuredmedia']['0'].source_url}} style={styles.image}/>
                     </View>
                     {/*<Text style={styles.title} numberOfLines={1}>{title.rendered}</Text>*/}
                     <HTML style={styles.title} html={titleHtml} imagesMaxWidth={Dimensions.get('window').width}/>
@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         marginTop: 10,
         fontWeight: 'bold',
-        color: '#663399',
     },
     genre: {
         ...defaultStyles.text,

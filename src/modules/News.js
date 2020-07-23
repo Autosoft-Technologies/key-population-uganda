@@ -14,18 +14,18 @@ import BlogComponent from "../components/BlogComponent";
 export default class News extends React.Component {
 
     // state = this.props.route;
-    state = {blogs: [], isLoaded: false};
-    // state = {blogs: [], isLoaded: false, url: this.props.route.params.url};
+    // state = {blogs: [], isLoaded: false};
+    state = {blogs: [], isLoaded: false, url: 'https://www.ngxuganda.com/KPU/wp-json/wp/v2/posts?_embed&per_page=100&categories=7'};
 
-    // fetchData = async () => {
-    //     const response = await fetch(this.state.url);
-    //     //posts
-    //     const posts = await response.json();
-    //     this.setState({blogs: posts});
-    // }
+    fetchData = async () => {
+        const response = await fetch(this.state.url);
+        //posts
+        const posts = await response.json();
+        this.setState({blogs: posts});
+    }
 
     componentDidMount() {
-        // this.fetchData();
+        this.fetchData();
         // this.state.isLoaded = true;
         this.setState({isLoaded: true});
     }
@@ -49,15 +49,11 @@ export default class News extends React.Component {
                         showsVerticalScrollIndicator={false}
                     >
                         <View style={{padding: 20}}>
-                            <Text>
-                                News
-                            </Text>
-                            {/*{this.state.blogs.map((blog, index) => <BlogComponent*/}
-                            {/*    blog={blog}*/}
-                            {/*    key={index}*/}
-                            {/*    onOpen={() => this.openBlog(blog)}/>)}*/}
+                            {this.state.blogs.map((blog, index) => <BlogComponent
+                                blog={blog}
+                                key={index}
+                                onOpen={() => this.openBlog(blog)}/>)}
                         </View>
-
                     </ScrollView>
                 </View>
             )

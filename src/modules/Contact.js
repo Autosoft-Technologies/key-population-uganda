@@ -235,6 +235,157 @@ class Contact extends Component {
                                 </View>
                             </TouchableOpacity>
                         </View>
+
+                        <Card containerStyle={{flex: 1, margin: 0,}}>
+                            <View style={{padding: 20}}>
+
+                                <TouchableOpacity>
+                                    <View style={[mailStyles.container]}>
+                                        <View style={mailStyles.iconRow}>
+                                            <Icon
+                                                ios="logo-facebook"
+                                                android="logo-facebook"
+                                                style={{color: "#0054a6"}}
+                                            />
+                                        </View>
+                                        <TouchableOpacity
+                                            onPress={() => {
+                                                Linking.openURL('fb://facewebmodal/f?href=https://facebook.com/YouthEqualityCenterUganda/');
+                                            }}
+                                            style={mailStyles.emailRow}>
+                                            <View style={mailStyles.emailColumn}>
+                                                <Text style={mailStyles.emailText}>Facebook</Text>
+                                            </View>
+                                            <View style={mailStyles.emailNameColumn}>
+                                                <Text style={mailStyles.emailNameText}>Youth Equality Center - YEC</Text>
+                                            </View>
+                                        </TouchableOpacity>
+                                    </View>
+                                </TouchableOpacity>
+                                {/*Seperator line*/}
+                                <View style={sepStyles.container}>
+                                    <View style={sepStyles.separatorOffset}/>
+                                    <View style={sepStyles.separator}/>
+                                </View>
+
+                                <TouchableOpacity>
+                                    <View style={[mailStyles.container]}>
+                                        <View style={mailStyles.iconRow}>
+                                            <Icon
+                                                ios="logo-instagram"
+                                                android="logo-instagram"
+                                                style={{color: "#663399"}}
+                                            />
+                                        </View>
+                                        <TouchableOpacity
+                                            onPress={() => {
+                                                Linking.openURL('https://www.instagram.com/youthequality.center/');
+                                            }}
+                                            style={mailStyles.emailRow}>
+                                            <View style={mailStyles.emailColumn}>
+                                                <Text style={mailStyles.emailText}>Instagram</Text>
+                                            </View>
+                                            <View style={mailStyles.emailNameColumn}>
+                                                <Text style={mailStyles.emailNameText}>youthequality.center</Text>
+                                            </View>
+                                        </TouchableOpacity>
+                                    </View>
+                                </TouchableOpacity>
+                                {/*Seperator line*/}
+                                <View style={sepStyles.container}>
+                                    <View style={sepStyles.separatorOffset}/>
+                                    <View style={sepStyles.separator}/>
+                                </View>
+
+
+                                <TouchableOpacity>
+                                    <View style={[mailStyles.container]}>
+                                        <View style={mailStyles.iconRow}>
+                                            <Icon
+                                                ios="logo-youtube"
+                                                android="logo-youtube"
+                                                style={{color: "#ff0000",}}/>
+                                        </View>
+                                        <TouchableOpacity
+                                            onPress={() => {
+                                                Linking.openURL('https://www.youtube.com/channel/UCmF6poejsAf-CyR-yPxjLUA');
+                                            }}
+                                            style={mailStyles.emailRow}>
+                                            <View style={mailStyles.emailColumn}>
+                                                <Text style={mailStyles.emailText}>You Tube</Text>
+                                            </View>
+                                            <View style={mailStyles.emailNameColumn}>
+                                                <Text style={mailStyles.emailNameText}>Youth Equality Centre YEC</Text>
+                                            </View>
+                                        </TouchableOpacity>
+                                    </View>
+                                </TouchableOpacity>
+                                {/*Seperator line*/}
+                                <View style={sepStyles.container}>
+                                    <View style={sepStyles.separatorOffset}/>
+                                    <View style={sepStyles.separator}/>
+                                </View>
+
+                                {/*Location view*/}
+                                <TouchableOpacity
+                                    onPress={() => Linking.openURL('https://twitter.com/youthEcenter')}
+                                >
+                                    <View style={[mailStyles.container]}>
+                                        <View style={mailStyles.iconRow}>
+                                            <Icon
+                                                ios="logo-twitter"
+                                                android="logo-twitter"
+                                                style={{color: "#00aeef",}}/>
+                                        </View>
+                                        <View style={mailStyles.emailRow}>
+                                            <View style={mailStyles.emailColumn}>
+                                                <Text style={mailStyles.emailText}>Twitter</Text>
+                                            </View>
+                                            <View style={mailStyles.emailNameColumn}>
+                                                <Text style={mailStyles.emailNameText}>@youthEcenter</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </TouchableOpacity>
+
+                                {/*Seperator line*/}
+                                <View style={sepStyles.container}>
+                                    <View style={sepStyles.separatorOffset}/>
+                                    <View style={sepStyles.separator}/>
+                                </View>
+
+                                {/*SoundCloud view*/}
+                                <TouchableOpacity
+                                    onPress={() => Linking.openURL('https://soundcloud.com/kaviri-ali-harrison')}
+                                >
+                                    <View style={[mailStyles.container]}>
+                                        <View style={mailStyles.iconRow}>
+                                            <Icon
+                                                ios="ios-cloud"
+                                                android="ios-cloud"
+                                                style={{color: "#f26522",}}
+                                            />
+                                        </View>
+                                        <View style={mailStyles.emailRow}>
+                                            <View style={mailStyles.emailColumn}>
+                                                <Text style={mailStyles.emailText}>Sound Cloud</Text>
+                                            </View>
+                                            <View style={mailStyles.emailNameColumn}>
+                                                <Text style={mailStyles.emailNameText}>Youth Equality Centre - YEC Radio</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </TouchableOpacity>
+
+                                {/*Seperator line*/}
+                                <View style={sepStyles.container}>
+                                    <View style={sepStyles.separatorOffset}/>
+                                    <View style={sepStyles.separator}/>
+                                </View>
+
+
+                            </View>
+                        </Card>
                     </Card>
                 </View>
             </ScrollView>

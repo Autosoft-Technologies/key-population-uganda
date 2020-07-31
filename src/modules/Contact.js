@@ -7,12 +7,24 @@ import {
     StyleSheet,
     Text,
     View,
-    TouchableOpacity,
+    TouchableOpacity, SafeAreaView,
 } from 'react-native'
-import MapView from 'react-native-maps';
+// import MapView from 'react-native-maps';
+import Map from "./Map";
+
+
+const region = {
+    latitude: 0.347947,
+    longitude: 32.662294,
+    latitudeDelta: 0.0922,
+    longitudeDelta: 0.0421
+}
 
 class Contact extends Component {
-
+    state = {
+        region: null,
+        coffeeShops: []
+    }
 
     onPressPlace = () => {
         console.log('place')
@@ -34,8 +46,8 @@ class Contact extends Component {
     getInitialState() {
         return {
             region: {
-                latitude: 37.78825,
-                longitude: -122.4324,
+                latitude: 0.347947,
+                longitude: 32.662294,
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
             },
@@ -49,28 +61,13 @@ class Contact extends Component {
     renderHeader = () => {
 
         return (
-            <View style={styles.headerContainer}>
-                <ImageBackground
-                    style={styles.headerBackgroundImage}
-                    // blurRadius={10}
-                    source={{uri: 'https://www.ngxuganda.com/KPU/wp-content/uploads/2020/07/peers-train-1.jpg'}}
-                >
-                    <View style={styles.headerColumn}>
 
-                        <Text style={styles.userNameText}>CONTACT US</Text>
-
-                    </View>
-                </ImageBackground>
-
-                {/*<MapView*/}
-                {/*    initialRegion={{*/}
-                {/*        latitude: 37.78825,*/}
-                {/*        longitude: -122.4324,*/}
-                {/*        latitudeDelta: 0.0922,*/}
-                {/*        longitudeDelta: 0.0421,*/}
-                {/*    }}*/}
-                {/*/>*/}
-            </View>
+                <SafeAreaView style={styles.mapContainer}>
+                    <Map
+                        region={region}
+                        places={this.state.coffeeShops}
+                    />
+                </SafeAreaView>
         )
     };
 
@@ -88,7 +85,8 @@ class Contact extends Component {
             <ScrollView style={styles.scroll}>
                 <View style={styles.container}>
                     {this.renderHeader()}
-                    <Card containerStyle={styles.cardContainer}>
+
+                    <Card>
                         <View style={{padding: 10}}>
                             {/*contact us*/}
                             <TouchableOpacity>
@@ -250,14 +248,14 @@ class Contact extends Component {
                                         </View>
                                         <TouchableOpacity
                                             onPress={() => {
-                                                Linking.openURL('fb://facewebmodal/f?href=https://facebook.com/YouthEqualityCenterUganda/');
+                                                Linking.openURL('fb://facewebmodal/f?href=https://facebook.com/KPUGANDA/');
                                             }}
                                             style={mailStyles.emailRow}>
                                             <View style={mailStyles.emailColumn}>
                                                 <Text style={mailStyles.emailText}>Facebook</Text>
                                             </View>
                                             <View style={mailStyles.emailNameColumn}>
-                                                <Text style={mailStyles.emailNameText}>Youth Equality Center - YEC</Text>
+                                                <Text style={mailStyles.emailNameText}>Key Population Uganda</Text>
                                             </View>
                                         </TouchableOpacity>
                                     </View>
@@ -279,14 +277,14 @@ class Contact extends Component {
                                         </View>
                                         <TouchableOpacity
                                             onPress={() => {
-                                                Linking.openURL('https://www.instagram.com/youthequality.center/');
+                                                Linking.openURL('https://www.instagram.com/keypopulationsug/');
                                             }}
                                             style={mailStyles.emailRow}>
                                             <View style={mailStyles.emailColumn}>
                                                 <Text style={mailStyles.emailText}>Instagram</Text>
                                             </View>
                                             <View style={mailStyles.emailNameColumn}>
-                                                <Text style={mailStyles.emailNameText}>youthequality.center</Text>
+                                                <Text style={mailStyles.emailNameText}>keypopulationsug</Text>
                                             </View>
                                         </TouchableOpacity>
                                     </View>
@@ -308,14 +306,14 @@ class Contact extends Component {
                                         </View>
                                         <TouchableOpacity
                                             onPress={() => {
-                                                Linking.openURL('https://www.youtube.com/channel/UCmF6poejsAf-CyR-yPxjLUA');
+                                                Linking.openURL('https://www.youtube.com/channel/UCCiAR5utKP2bK7lBnudyoMg');
                                             }}
                                             style={mailStyles.emailRow}>
                                             <View style={mailStyles.emailColumn}>
                                                 <Text style={mailStyles.emailText}>You Tube</Text>
                                             </View>
                                             <View style={mailStyles.emailNameColumn}>
-                                                <Text style={mailStyles.emailNameText}>Youth Equality Centre YEC</Text>
+                                                <Text style={mailStyles.emailNameText}>Key Population Uganda</Text>
                                             </View>
                                         </TouchableOpacity>
                                     </View>
@@ -328,7 +326,7 @@ class Contact extends Component {
 
                                 {/*Location view*/}
                                 <TouchableOpacity
-                                    onPress={() => Linking.openURL('https://twitter.com/youthEcenter')}
+                                    onPress={() => Linking.openURL('https://twitter.com/KPUganda')}
                                 >
                                     <View style={[mailStyles.container]}>
                                         <View style={mailStyles.iconRow}>
@@ -342,7 +340,7 @@ class Contact extends Component {
                                                 <Text style={mailStyles.emailText}>Twitter</Text>
                                             </View>
                                             <View style={mailStyles.emailNameColumn}>
-                                                <Text style={mailStyles.emailNameText}>@youthEcenter</Text>
+                                                <Text style={mailStyles.emailNameText}>@KPUganda</Text>
                                             </View>
                                         </View>
                                     </View>
@@ -353,36 +351,6 @@ class Contact extends Component {
                                     <View style={sepStyles.separatorOffset}/>
                                     <View style={sepStyles.separator}/>
                                 </View>
-
-                                {/*SoundCloud view*/}
-                                <TouchableOpacity
-                                    onPress={() => Linking.openURL('https://soundcloud.com/kaviri-ali-harrison')}
-                                >
-                                    <View style={[mailStyles.container]}>
-                                        <View style={mailStyles.iconRow}>
-                                            <Icon
-                                                ios="ios-cloud"
-                                                android="ios-cloud"
-                                                style={{color: "#f26522",}}
-                                            />
-                                        </View>
-                                        <View style={mailStyles.emailRow}>
-                                            <View style={mailStyles.emailColumn}>
-                                                <Text style={mailStyles.emailText}>Sound Cloud</Text>
-                                            </View>
-                                            <View style={mailStyles.emailNameColumn}>
-                                                <Text style={mailStyles.emailNameText}>Youth Equality Centre - YEC Radio</Text>
-                                            </View>
-                                        </View>
-                                    </View>
-                                </TouchableOpacity>
-
-                                {/*Seperator line*/}
-                                <View style={sepStyles.container}>
-                                    <View style={sepStyles.separatorOffset}/>
-                                    <View style={sepStyles.separator}/>
-                                </View>
-
 
                             </View>
                         </Card>
@@ -399,7 +367,11 @@ const styles = StyleSheet.create({
         // borderWidth: 0,
         flex: 1,
         margin: 0,
-        // padding: 0,
+        padding: 0,
+    },
+    mapContainer: {
+        width: '100%',
+        height: 270,
     },
     container: {
         flex: 1,
@@ -408,10 +380,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         flex: 1,
         paddingTop: 30,
-    },
-    headerBackgroundImage: {
-        paddingBottom: 20,
-        paddingTop: 35,
     },
     headerColumn: {
         backgroundColor: 'transparent',
@@ -428,7 +396,7 @@ const styles = StyleSheet.create({
     telContainer: {
         backgroundColor: '#FFF',
         flex: 1,
-        paddingTop: 30,
+        // paddingTop: 30,
     },
     userAddressRow: {
         alignItems: 'center',
@@ -448,7 +416,7 @@ const styles = StyleSheet.create({
         borderRadius: 85,
         borderWidth: 3,
         height: 170,
-        marginBottom: 15,
+        // marginBottom: 15,
         width: 170,
     },
     userNameText: {

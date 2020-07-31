@@ -18,6 +18,8 @@
     "@tickid/react-native-accordion": "^1.0.0",
     "axios": "^0.19.2",
     "expo": "~38.0.8",
+    "expo-location": "~8.2.1",
+    "expo-permissions": "~9.0.1",
     "expo-status-bar": "^1.0.2",
     "moment": "^2.24.0",
     "native-base": "2.13.8",

@@ -15,6 +15,7 @@ export default class News extends React.Component {
 
     // state = this.props.route;
     // state = {blogs: [], isLoaded: false};
+    // state = {blogs: [], isLoaded: false, url: 'https://www.esrhr.org/wp-json/wp/v2/posts?_embed&per_page=100&categories=15'};
     state = {blogs: [], isLoaded: false, url: 'https://www.ngxuganda.com/KPU/wp-json/wp/v2/posts?_embed&per_page=100&categories=7'};
 
     fetchData = async () => {

@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.2.0",
     "@react-native-community/masked-view": "0.1.6",
     "@react-native-community/netinfo": "5.5.1",
     "@react-native-community/slider": "^2.0.9",
@@ -18,6 +19,8 @@
     "@tickid/react-native-accordion": "^1.0.0",
     "axios": "^0.19.2",
     "expo": "~38.0.8",
+    "expo-constants": "latest",
+    "expo-image-picker": "^8.4.0",
     "expo-location": "~8.2.1",
     "expo-permissions": "~9.0.1",
     "expo-status-bar": "^1.0.2",
@@ -30,6 +33,7 @@
     "react-native-app-intro-slider": "^4.0.2",
     "react-native-eject": "^0.1.2",
     "react-native-gesture-handler": "~1.6.0",
+    "react-native-image-slider": "^2.0.3",
     "react-native-maps": "0.27.1",
     "react-native-reanimated": "~1.7.0",
     "react-native-render-html": "^4.2.0",

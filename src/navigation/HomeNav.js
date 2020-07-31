@@ -20,6 +20,13 @@ import Centres from "../modules/Centres";
 import Doctors from "../modules/doctors/Doctors";
 import Reminders from "../modules/reminders/Reminders";
 import Drugs from "../modules/drugs/Drugs";
+import ProfileScreen from "../modules/Profile/ProfileScreen";
+import EventDetailScreen from "../modules/EventDetail/EventDetailScreen";
+import ProfileEditScreen from "../modules/Profile/ProfileEdit/ProfileEditScreen";
+import AboutUsScreen from "../modules/Profile/Settings/AboutUs/AboutUsScreen";
+import HelpScreen from "../modules/Profile/Settings/Help/HelpScreen";
+import SettingsScreen from "../modules/Profile/Settings/SettingsScreen";
+import TermsAndPoliciesScreen from "../modules/Profile/Settings/TermsAndPolicies/TermsAndPoliciesScreen";
 
 const Stack = createStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -81,7 +88,7 @@ export default class HomeNav extends Component {
                 <BottomTabs.Screen name="Centres" component={Centres}/>
                 {/*<BottomTabs.Screen name="About" component={About}/>*/}
                 <BottomTabs.Screen name="Contact" component={Contact}/>
-                <BottomTabs.Screen name="Personal" component={Personal}/>
+                <BottomTabs.Screen name="Personal" component={ProfileScreen}/>
             </BottomTabs.Navigator>
         )
     };
@@ -98,25 +105,14 @@ export default class HomeNav extends Component {
                 <NavigationContainer theme={MyTheme}>
                     <Stack.Navigator
                         screenOptions={({route, navigation}) => ({
-                            headerStyle: {
-                                backgroundColor: '#d42329',
-                            },
-                            headerTintColor: '#fff',
-                            headerTitleStyle: {
-                                fontWeight: 'bold',
-                            },
-                            headerRight: () => (
-                                <View style={styles.iconContainer}>
-
-                                    <TouchableOpacity onPress={() => alert('Options')}>
-                                        <Icon name={Platform.OS === "ios" ? "md-more" : "md-more"}
-                                              color='#fff'
-                                              size={30}
-                                        />
-                                    </TouchableOpacity>
-
-                                </View>
-                            )
+                            // headerStyle: {
+                            //     backgroundColor: '#d42329',
+                            // },
+                            // headerTintColor: '#fff',
+                            // headerTitleStyle: {
+                            //     fontWeight: 'bold',
+                            // },
+                            headerShown: false
                         })}
                     >
 
@@ -134,12 +130,19 @@ export default class HomeNav extends Component {
                                 headerRight: null
                             }}
                         />
-                        <Stack.Screen name="Profile" component={Profile}/>
+                        <Stack.Screen name="Profile" component={ProfileScreen}/>
                         <Stack.Screen name="Details" component={PostDetails}/>
                         <Stack.Screen name="Personal" component={Personal}/>
                         <Stack.Screen name="Doctors" component={Doctors}/>
                         <Stack.Screen name="Reminders" component={Reminders}/>
+                        <Stack.Screen name="Settings" component={SettingsScreen}/>
+                        <Stack.Screen name="ProfileEdit" component={ProfileEditScreen}/>
+                        <Stack.Screen name="EventDetailScreen" component={EventDetailScreen}/>
                         <Stack.Screen name="Drugs" component={Drugs}/>
+                        <Stack.Screen name="AboutUs" component={AboutUsScreen}/>
+                        <Stack.Screen name="Help" component={HelpScreen}/>
+                        <Stack.Screen name="TermsAndPolicies" component={TermsAndPoliciesScreen}/>
+                        {/*<Stack.Screen name="Drugs" component={Drugs}/>*/}
                         <Stack.Screen
                             options={({route, navigation}) => ({
                                 title: route.params.name

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import contactData from '../../data/contact.json'
 
-export default class ProfileScreen extends Component {
+export default class Reminders extends Component {
 
     state = {data: contactData};
 
@@ -17,19 +17,7 @@ export default class ProfileScreen extends Component {
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    <View style={styles.header}></View>
-                    <Image style={styles.avatar} source={{uri: this.state.data.avatar}}/>
-                    <View style={styles.body}>
-                        <View style={styles.bodyContent}>
-                            <Text style={styles.name}>{this.state.data.name}</Text>
-                            <Text style={styles.info}>{this.state.data.contact}</Text>
-                            <Text style={styles.description}>{this.state.data.bio}</Text>
-
-                            <TouchableOpacity style={styles.buttonContainer}>
-                                <Text>Update</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
+                    <Text style={styles.name}>Reminders</Text>
                 </View>
             </ScrollView>
         );
@@ -71,7 +59,7 @@ const styles = StyleSheet.create({
     },
     name: {
         fontSize: 28,
-        color: "#696969",
+        // color: "#696969",
         fontWeight: "600"
     },
     info: {

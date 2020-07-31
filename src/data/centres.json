@@ -1,247 +1,387 @@
 [
   {
     "id": 1,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Mild may",
-    "DISTRICT": "Mityana Town",
-    "FOCAL PERSON": "Winnie"
+    "provider": "NA",
+    "facility": "Mild may",
+    "district": "Mityana Town",
+    "focalPerson": "Winnie",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 2,
-    "SERVICE PROVIDER": "Alex Mugenyi",
-    "FACILTY": "Reach out Mbuya Mubende",
-    "DISTRICT": "Mubende Municipality",
-    "FOCAL PERSON": "Alex Mugenyi"
+    "provider": "Alex Mugenyi",
+    "facility": "Reach out Mbuya Mubende",
+    "district": "Mubende Municipality",
+    "focalPerson": "Alex Mugenyi",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 3,
-    "SERVICE PROVIDER": "Kagolo Annet",
-    "FACILTY": "Fort portal referral hospital",
-    "DISTRICT": "Fort portal Municipality",
-    "FOCAL PERSON": "Kagoro Annet"
+    "provider": "Kagolo Annet",
+    "facility": "Fort portal referral hospital",
+    "district": "Fort portal Municipality",
+    "focalPerson": "Kagoro Annet",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 4,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Kasese Municipal health centre",
-    "DISTRICT": "Kasese  Municipality",
-    "FOCAL PERSON": "Kabugho Juliet"
+    "provider": "NA",
+    "facility": "Kasese Municipal health centre",
+    "district": "Kasese  Municipality",
+    "focalPerson": "Kabugho Juliet",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 5,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Rukoki health centre 3",
-    "DISTRICT": "Kasese - Rukoki",
-    "FOCAL PERSON": "Babilebe James"
+    "provider": "NA",
+    "facility": "Rukoki health centre 3",
+    "district": "Kasese - Rukoki",
+    "focalPerson": "Babilebe James",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 6,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Katungulu health centre",
-    "DISTRICT": "Kasese- Katungulu",
-    "FOCAL PERSON": "Apio"
+    "provider": "NA",
+    "facility": "Katungulu health centre",
+    "district": "Kasese- Katungulu",
+    "focalPerson": "Apio",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 7,
-    "SERVICE PROVIDER": "Biira Maureen",
-    "FACILTY": "Bwera general hospital",
-    "DISTRICT": "Kasese  Bwera",
-    "FOCAL PERSON": "Aliganyira.M.Robina"
+    "provider": "Biira Maureen",
+    "facility": "Bwera general hospital",
+    "district": "Kasese  Bwera",
+    "focalPerson": "Aliganyira.M.Robina",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 8,
-    "SERVICE PROVIDER": "Beatrice Mbabazi",
-    "FACILTY": "Kagote health centre 3",
-    "DISTRICT": "Kabarole – Fortportal Town",
-    "FOCAL PERSON": "Mbabazi Beatrice"
+    "provider": "Beatrice Mbabazi",
+    "facility": "Kagote health centre 3",
+    "district": "Kabarole – Fortportal Town",
+    "focalPerson": "Mbabazi Beatrice",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 9,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Mbarara Municipal",
-    "DISTRICT": "Mbarara",
-    "FOCAL PERSON": "Mutebi Akram"
+    "provider": "NA",
+    "facility": "Mbarara Municipal",
+    "district": "Mbarara",
+    "focalPerson": "Mutebi Akram",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 10,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Rakai Hospital",
-    "DISTRICT": "Rakai  Town",
-    "FOCAL PERSON": "Kalachi Emmy"
+    "provider": "NA",
+    "facility": "Rakai Hospital",
+    "district": "Rakai  Town",
+    "focalPerson": "Kalachi Emmy",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 11,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Kalisizo hospital",
-    "DISTRICT": "Rakai",
-    "FOCAL PERSON": "Katende Martin"
+    "provider": "NA",
+    "facility": "Kalisizo hospital",
+    "district": "Rakai",
+    "focalPerson": "Katende Martin",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 12,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Kasali Health Centre",
-    "DISTRICT": "",
-    "FOCAL PERSON": "John Baptist"
+    "provider": "NA",
+    "facility": "Kasali Health Centre",
+    "district": "",
+    "focalPerson": "John Baptist",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 13,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "TASO Masaka",
-    "DISTRICT": "Masaka Town",
-    "FOCAL PERSON": "Namulondo Flavia"
+    "provider": "NA",
+    "facility": "TASO Masaka",
+    "district": "Masaka Town",
+    "focalPerson": "Namulondo Flavia",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 14,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Lyantonde Muslim Health Centre 3",
-    "DISTRICT": "Lyantonde",
-    "FOCAL PERSON": "Grace Amuge"
+    "provider": "NA",
+    "facility": "Lyantonde Muslim Health Centre 3",
+    "district": "Lyantonde",
+    "focalPerson": "Grace Amuge",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 15,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "(MARPI MULAGO) Mbarara regional referral hospital",
-    "DISTRICT": "Mbarara Town",
-    "FOCAL PERSON": "Ndamuka Robert"
+    "provider": "NA",
+    "facility": "(MARPI MULAGO) Mbarara regional referral hospital",
+    "district": "Mbarara Town",
+    "focalPerson": "Ndamuka Robert",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 16,
-    "SERVICE PROVIDER": "Dr. Okello Julius Peter",
-    "FACILTY": "TASO Mbarara",
-    "DISTRICT": "Mbarara Town",
-    "FOCAL PERSON": "Muhumuza Julius"
+    "provider": "Dr. Okello Julius Peter",
+    "facility": "TASO Mbarara",
+    "district": "Mbarara Town",
+    "focalPerson": "Muhumuza Julius",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 17,
-    "SERVICE PROVIDER": "Dr. Harrison Masereka",
-    "FACILTY": "Kireka SDA health centre",
-    "DISTRICT": "Wakiso - Kireka",
-    "FOCAL PERSON": "Dr. Harrison Masereka"
+    "provider": "Dr. Harrison Masereka",
+    "facility": "Kireka SDA health centre",
+    "district": "Wakiso - Kireka",
+    "focalPerson": "Dr. Harrison Masereka",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 18,
-    "SERVICE PROVIDER": "Nekesa Gertrude",
-    "FACILTY": "Busia Health Centre 4",
-    "DISTRICT": "Busia Town",
-    "FOCAL PERSON": "Nekesa Gertrude"
+    "provider": "Nekesa Gertrude",
+    "facility": "Busia Health Centre 4",
+    "district": "Busia Town",
+    "focalPerson": "Nekesa Gertrude",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 19,
-    "SERVICE PROVIDER": "Murangira Aggrey",
-    "FACILTY": "Jinja Regional Referal hospital",
-    "DISTRICT": "Jinja- Town",
-    "FOCAL PERSON": "Murangira Aggrey"
+    "provider": "Murangira Aggrey",
+    "facility": "Jinja Regional Referal hospital",
+    "district": "Jinja- Town",
+    "focalPerson": "Murangira Aggrey",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 20,
-    "SERVICE PROVIDER": "Mwanje Zulpher Baar",
-    "FACILTY": "Malaba health centre3",
-    "DISTRICT": "Malaba Border",
-    "FOCAL PERSON": "Mwanje Zulpher Baar"
+    "provider": "Mwanje Zulpher Baar",
+    "facility": "Malaba health centre3",
+    "district": "Malaba Border",
+    "focalPerson": "Mwanje Zulpher Baar",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 21,
-    "SERVICE PROVIDER": "Okwany Joseph",
-    "FACILTY": "TASO Soroti",
-    "DISTRICT": "Soroti Town",
-    "FOCAL PERSON": "Okwany Joseph"
+    "provider": "Okwany Joseph",
+    "facility": "TASO Soroti",
+    "district": "Soroti Town",
+    "focalPerson": "Okwany Joseph",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 22,
-    "SERVICE PROVIDER": "Kisaame Andrew",
-    "FACILTY": "TASO Mbale",
-    "DISTRICT": "Mbale Town",
-    "FOCAL PERSON": "Amoit Sandra"
+    "provider": "Kisaame Andrew",
+    "facility": "TASO Mbale",
+    "district": "Mbale Town",
+    "focalPerson": "Amoit Sandra",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 23,
-    "SERVICE PROVIDER": "Opiyo John Stephen",
-    "FACILTY": "TASO Gulu",
-    "DISTRICT": "Gulu Town",
-    "FOCAL PERSON": "Opiyo John Stephen"
+    "provider": "Opiyo John Stephen",
+    "facility": "TASO Gulu",
+    "district": "Gulu Town",
+    "focalPerson": "Opiyo John Stephen",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 24,
-    "SERVICE PROVIDER": "Conselor Ernest",
-    "FACILTY": "Kisenyi Health Center",
-    "DISTRICT": "Kampala",
-    "FOCAL PERSON": "Ernest"
+    "provider": "Conselor Ernest",
+    "facility": "Kisenyi Health Center",
+    "district": "Kampala",
+    "focalPerson": "Ernest",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 25,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Kisugu Health Center",
-    "DISTRICT": "Kampala",
-    "FOCAL PERSON": "Lucy Wabwire"
+    "provider": "NA",
+    "facility": "Kisugu Health Center",
+    "district": "Kampala",
+    "focalPerson": "Lucy Wabwire",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 26,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Marpi Mulago",
-    "DISTRICT": "Kampala- Mulago",
-    "FOCAL PERSON": "Dr Amza"
+    "provider": "NA",
+    "facility": "Marpi Mulago",
+    "district": "Kampala- Mulago",
+    "focalPerson": "Dr Amza",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 27,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Kawaala Health Center",
-    "DISTRICT": "Kawaala - Lubaga",
-    "FOCAL PERSON": "Counsellor Esther"
+    "provider": "NA",
+    "facility": "Kawaala Health Center",
+    "district": "Kawaala - Lubaga",
+    "focalPerson": "Counsellor Esther",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 28,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Kasangati Health Center",
-    "DISTRICT": "Kasangati Wakiso",
-    "FOCAL PERSON": "Counsellor Monica"
+    "provider": "NA",
+    "facility": "Kasangati Health Center",
+    "district": "Kasangati Wakiso",
+    "focalPerson": "Counsellor Monica",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 29,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "TASO Entebbe",
-    "DISTRICT": "Entebbe Municipality",
-    "FOCAL PERSON": "Counsellor Edith"
+    "provider": "NA",
+    "facility": "TASO Entebbe",
+    "district": "Entebbe Municipality",
+    "focalPerson": "Counsellor Edith",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 30,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "TASO Mulago",
-    "DISTRICT": "Kampala- Mulago",
-    "FOCAL PERSON": "Counselor Godfrey"
+    "provider": "NA",
+    "facility": "TASO Mulago",
+    "district": "Kampala- Mulago",
+    "focalPerson": "Counselor Godfrey",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 31,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Alive Medical Center",
-    "DISTRICT": "Namuwongo - Kampala",
-    "FOCAL PERSON": "Dr Sarah"
+    "provider": "NA",
+    "facility": "Alive Medical Center",
+    "district": "Namuwongo - Kampala",
+    "focalPerson": "Dr Sarah",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 32,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Mild May",
-    "DISTRICT": "Kajansi – Entebbe Road",
-    "FOCAL PERSON": "Dr Richard"
+    "provider": "NA",
+    "facility": "Mild May",
+    "district": "Kajansi – Entebbe Road",
+    "focalPerson": "Dr Richard",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 33,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Komamboga Health Center",
-    "DISTRICT": "Komamboga",
-    "FOCAL PERSON": "NA"
+    "provider": "NA",
+    "facility": "Komamboga Health Center",
+    "district": "Komamboga",
+    "focalPerson": "NA",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 34,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Naguru Teenage Center",
-    "DISTRICT": "Naguru  Nakawa",
-    "FOCAL PERSON": "NA"
+    "provider": "NA",
+    "facility": "Naguru Teenage Center",
+    "district": "Naguru  Nakawa",
+    "focalPerson": "NA",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   },
   {
     "id": 35,
-    "SERVICE PROVIDER": "NA",
-    "FACILTY": "Kiswa Health Center",
-    "DISTRICT": "Kiswa -Bugolobi",
-    "FOCAL PERSON": "NA"
+    "provider": "NA",
+    "facility": "Kiswa Health Center",
+    "district": "Kiswa -Bugolobi",
+    "focalPerson": "NA",
+    "latitude": "",
+    "longitude": "",
+    "latitudeDelta": "",
+    "longitudeDelta": ""
   }
 ]

@@ -8,16 +8,18 @@ import {Icon} from 'native-base';
 import Home from "../modules/Home";
 import Contact from "../modules/Contact";
 import About from "../modules/About";
-import ProfileScreen from "../modules/Profile/ProfileScreen";
-import Profile from "../modules/Profile";
+import Profile from "../modules/Profile/Profile";
+import Personal from "../modules/Personal";
 import PostDetails from "../modules/details/PostDetails";
-import Mixrl from "../modules/soundcloud/Mixrl";
 import Posts from "../modules/Posts";
 import Articles from "../modules/Articles";
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Blogs from "../modules/Blogs";
 import News from "../modules/News";
 import Centres from "../modules/Centres";
+import Doctors from "../modules/doctors/Doctors";
+import Reminders from "../modules/reminders/Reminders";
+import Drugs from "../modules/drugs/Drugs";
 
 const Stack = createStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -79,7 +81,7 @@ export default class HomeNav extends Component {
                 <BottomTabs.Screen name="Centres" component={Centres}/>
                 {/*<BottomTabs.Screen name="About" component={About}/>*/}
                 <BottomTabs.Screen name="Contact" component={Contact}/>
-                <BottomTabs.Screen name="Personal" component={Profile}/>
+                <BottomTabs.Screen name="Personal" component={Personal}/>
             </BottomTabs.Navigator>
         )
     };
@@ -132,10 +134,12 @@ export default class HomeNav extends Component {
                                 headerRight: null
                             }}
                         />
-                        <Stack.Screen name="Profile" component={ProfileScreen}/>
+                        <Stack.Screen name="Profile" component={Profile}/>
                         <Stack.Screen name="Details" component={PostDetails}/>
-                        <Stack.Screen name="SoundCloud" component={Profile}/>
-                        <Stack.Screen name="Mixrl" component={Mixrl}/>
+                        <Stack.Screen name="Personal" component={Personal}/>
+                        <Stack.Screen name="Doctors" component={Doctors}/>
+                        <Stack.Screen name="Reminders" component={Reminders}/>
+                        <Stack.Screen name="Drugs" component={Drugs}/>
                         <Stack.Screen
                             options={({route, navigation}) => ({
                                 title: route.params.name

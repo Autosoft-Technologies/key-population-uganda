@@ -12,20 +12,9 @@ export default function EventItem(props) {
             <View style={[appStyles.row_container, {justifyContent: 'flex-start'}]}>
                 <Text style={[appStyles.font_lg, appStyles.font_bold, {color: Colors.blackMarlinColor}]}>{props.name}</Text>
             </View>
-            <View style={[appStyles.row_container, {justifyContent: 'flex-start'}]}>
-                <View>
-                    <Text style={[appStyles.font_md, appStyles.gray]}>{props.place}</Text>
-                </View>
-                <View>
-                    <Text style={[appStyles.pink, appStyles.font_md, {marginLeft: 10}]}>In 2 Days</Text>
-                </View>
-            </View>
+
         </View>
-        <View style={{flex: 2, alignItems: 'flex-end'}}>
-            <View style={styles.event_date}>
-                <Text style={appStyles.white}>{props.open_at}</Text>
-            </View>
-        </View>
+
     </View>
   );
 }

@@ -32,7 +32,14 @@ export default class News extends React.Component {
     }
 
     openBlog = (blog) => {
-        this.props.navigation.navigate('Details', blog);
+        this.props.navigation.navigate('EventDetailScreen',
+            {
+                immage: blog.better_featured_image.source_url,
+                title: blog.title.rendered,
+                description: blog.excerpt.rendered,
+                link: blog.link,
+                pubDate: blog.date,
+            });
     }
 
     render() {

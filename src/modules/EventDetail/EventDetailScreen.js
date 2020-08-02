@@ -3,25 +3,28 @@ import { SafeAreaView, ImageBackground, ScrollView, Image, Text, View, Touchable
 import Colors from '../../constants/Colors';
 import appStyles from '../../styles/app-style';
 import styles from './style';
-
 import EventItem from '../../components/EventItem';
-
+import HTML from "react-native-render-html/src/HTML";
+import {Linking} from "expo/build/deprecated.web";
+import moment from "moment";
 class EventDetailScreen extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //
+  //   this.state = {
+  //
+  //   }
+  // }
+  state = this.props.route;
 
   // === === //
     render() {
+      const blog = this.state.params;
         return (
             <SafeAreaView style={appStyles.container}>
               <ScrollView style={[appStyles.w_100, {flex: 1}]}>
-                <ImageBackground 
-                  source={require('../../../assets/images/events/events1.png')}
+                <ImageBackground
+                    source={{uri: blog.immage}}
                   style={[appStyles.col_container, {height: Dimensions.get('window').width * 0.65}]}>
                   <View style={[appStyles.col_container, {flex: 2}]}>
                     <TouchableOpacity
@@ -33,63 +36,31 @@ class EventDetailScreen extends React.Component {
                         style={styles.arrow_left_icon}
                       />
                     </TouchableOpacity>
-                    <TouchableOpacity
-                      style={styles.info_button}
-                      onPress={() => this.editProfile()}
-                    >
-                      <Image 
-                        source={require('../../../assets/images/icons/info-white.png')}
-                        style={styles.info_icon}
-                      />
-                    </TouchableOpacity>
                   </View>
                 </ImageBackground>
                 <View style={[appStyles.col_container, {alignItems: 'flex-start'}]}>
                     <EventItem 
-                      name='Muse Simulation Theory Tour' 
-                      place='A2 Green Concert Hall' 
-                      open_at='24 JUN' 
+                      name={blog.title}
+                      open_at={blog.date}
                     />
                     <View style={[appStyles.col_container, {alignItems: 'flex-start', width: '80%', paddingLeft: 10, paddingTop: 20, paddingBottom: 20}]}>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
-                      <Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>
+                      <HTML style={styles.genre} html={blog.description}/>
+                      {/*<Text style={appStyles.gray}>On 30 August 2018, Muse announced their eight studio album,</Text>*/}
                     </View>
-                    <View>
-                      <View style={{paddingLeft: 10, marginTop:5}}>
-                        <Text style={[appStyles.font_md, appStyles.gray]}>VENUE</Text>
-                      </View>
-                      <View style={{padding: 10, flexDirection: 'row'}}>
-                        <View>
-                          <Image 
-                            source={require('../../../assets/images/avatars/avatar-f.png')}
-                            style={styles.venue_image} 
-                          />
-                        </View>
-                        <View style={{paddingLeft:10, paddingTop: 5, paddingBottom: 10}}>
-                          <Text style={[appStyles.font_md, {flex: 1}]}>BSA Luzhniki</Text>
-                          <Text style={[appStyles.font_sm, appStyles.gray, {flex: 1}]}>Luzhniki str.24</Text>
-                        </View>
-                      </View>
-                    </View>
+
                 </View>
               </ScrollView>
               <View style={styles.footer}>
                 <View style={{flex: 1}}>
-                  <Text style={appStyles.pink}>$50</Text>
-                  <Text style={[appStyles.black, appStyles.font_bold]}>2 tickets max</Text>
+                  <Text style={appStyles.pink}>Published on</Text>
+                  {/*<Text style={[appStyles.black, appStyles.font_bold]}>{blog.date}</Text>*/}
+                  <Text style={appStyles.black} numberOfLines={1}>{moment(blog.pubDate).format("MMM Do YYYY")}</Text>
                 </View>
                 <View style={{flex: 1}}>
                   <Button 
-                    title='Book a Ticket' 
+                    title='View on website'
                     color={Colors.pinkColor}
-                    onPress={() => Alert.alert('click Booking Ticket')} 
+                    onPress={() => Linking.openURL(blog.link)}
                   />
                 </View>
               </View>

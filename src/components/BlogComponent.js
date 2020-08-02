@@ -42,7 +42,7 @@ export default class BlogComponent extends Component {
                     </View>
                     {/*<Text style={styles.title} numberOfLines={1}>{title.rendered}</Text>*/}
                     <HTML style={styles.title} html={titleHtml} imagesMaxWidth={Dimensions.get('window').width}/>
-                    <HTML style={styles.genre} html={someText}/>
+                    {/*<HTML style={styles.genre} html={someText}/>*/}
                     <Text style={styles.entrance} numberOfLines={1}>{moment(date).format("MMM Do YYYY")}</Text>
                 </TouchableOpacity>
             </View>

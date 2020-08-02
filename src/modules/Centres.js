@@ -1,52 +1,64 @@
-import React, { Component } from 'react'
-import { Text, SafeAreaView, StyleSheet } from 'react-native';
-import Map from "./Map";
-import * as Permissions from "expo-permissions";
-import { Marker } from "react-native-maps";
-// import { Location, Permissions } from 'expo'
-
-// A placeholder until we get our own location
-const region = {
-    latitude: 0.347947,
-    longitude: 32.662294,
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421
-}
-
-const deltas = {
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421
-};
+import React, {Component} from 'react'
+import {
+    View,
+    Text,
+    StyleSheet,
+    Dimensions
+} from 'react-native'
+import MapView from "react-native-map-clustering";
+import {Marker, AnimatedRegion} from "react-native-maps";
+import healthyCenters from '../data/centres';
 
 export default class Centres extends Component {
 
+
     state = {
-        region: null,
-        coffeeShops: []
-    };
-
-    componentWillMount() {
-        this.getLocationAsync();
+        initialRegion: {
+            latitude: 0.3210737,
+            longitude: 32.6150801,
+            latitudeDelta: 0.05,
+            longitudeDelta: 0.05
+        },
+        centres: []
     }
 
-    getRandomLatitude(min = 48, max = 56) {
-        return Math.random() * (max - min) + min;
+    componentDidMount() {
+        this.setInitialRegion();
+        this.setState({
+            centres: healthyCenters
+        });
     }
 
-    getRandomLongitude(min = 14, max = 24) {
-        return Math.random() * (max - min) + min;
+    setInitialRegion() {
+        navigator.geolocation.getCurrentPosition((position) => {
+                const lat = parseFloat(position.coords.latitude);
+                const long = parseFloat(position.coords.longitude);
+
+                const initialRegion = {
+                    latitude: lat,
+                    longitude: long,
+                    latitudeDelta: 0.05,
+                    longitudeDelta: 0.05,
+                };
+
+                this.setState({initialRegion: initialRegion})
+            },
+            (error) => alert(JSON.stringify(error)),
+            {enableHighAccuracy: true, timeout: 20000});
     }
 
-    generateMarkers = count => {
+    _generateMarkers = () => {
         const markers = [];
 
-        for (let i = 0; i < count; i++) {
+        for (let i = 0; i < this.state.centres.length; i++) {
             markers.push(
                 <Marker
                     key={i}
+                    title={this.state.centres[i].facility}
+                    description={'Provider: ' + this.state.centres[i].provider}
                     coordinate={{
-                        latitude: this.getRandomLatitude(),
-                        longitude: this.getRandomLongitude()
+                        latitude: this.state.centres[i].latitude,
+                        longitude: this.state.centres[i].longitude
                     }}
                 />
             );
@@ -55,49 +67,24 @@ export default class Centres extends Component {
         return markers;
     };
 
-    getCoffeeShops = async () => {
-        const { latitude, longitude } = this.state.region;
-        const userLocation = { latitude, longitude };
-        const coffeeShops = this.generateMarkers()
-        this.setState({ coffeeShops });
-    };
-
-    getLocationAsync = async () => {
-        let { status } = await Permissions.askAsync(Permissions.LOCATION);
-        if (status !== 'granted') {
-            this.setState({
-                errorMessage: 'Permission to access location was denied'
-            });
-        }
-
-        let location = await Location.getCurrentPositionAsync({});
-        const region = {
-            latitude: location.coords.latitude,
-            longitude: location.coords.longitude,
-            ...deltas
-        };
-        await this.setState({ region });
-        await this.getCoffeeShops();
-    }
-
     render() {
         return (
-            <SafeAreaView style={styles.container}>
-                <Map
-                    region={region}
-                    places={this.state.coffeeShops}
-                />
-            </SafeAreaView>
-        );
+            <View style={{flex: 1}}>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                    <MapView initialRegion={this.state.initialRegion} style={styles.container}>
+                        {this._generateMarkers()}
+                    </MapView>
+                </View>
+            </View>
+        )
     }
 }
 
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         width: '100%',
-        height: '80%',
+        height: Dimensions.get("window").height,
     }
 });
-
-

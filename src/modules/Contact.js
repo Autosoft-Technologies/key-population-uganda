@@ -9,8 +9,8 @@ import {
     View,
     TouchableOpacity, SafeAreaView,
 } from 'react-native'
-// import MapView from 'react-native-maps';
-import Map from "./Map";
+import MapView, {Marker} from 'react-native-maps';
+// import Map from "./Map";
 
 
 const region = {
@@ -22,51 +22,30 @@ const region = {
 
 class Contact extends Component {
     state = {
-        region: null,
-        coffeeShops: []
+        region: {
+            latitude: 0.347947,
+            longitude: 32.662294,
+            latitudeDelta: 0.02,
+            longitudeDelta: 0.02,
+        },
     }
 
-    onPressPlace = () => {
-        console.log('place')
-    };
-
-    onPressTel = number => {
-        Linking.openURL(`tel://${number}`).catch(err => console.log('Error:', err))
-    };
-
-    onPressSms = () => {
-        console.log('sms')
-    };
-
-    onPressEmail = email => {
-        Linking.openURL(`mailto://${email}?subject=subject&body=body`).catch(err =>
-            console.log('Error:', err)
-        )
-    };
-    getInitialState() {
-        return {
-            region: {
-                latitude: 0.347947,
-                longitude: 32.662294,
-                latitudeDelta: 0.0922,
-                longitudeDelta: 0.0421,
-            },
-        };
-    }
-
-    onRegionChange(region) {
-        this.setState({ region });
-    }
 
     renderHeader = () => {
 
         return (
 
                 <SafeAreaView style={styles.mapContainer}>
-                    <Map
-                        region={region}
-                        places={this.state.coffeeShops}
-                    />
+                    <MapView initialRegion={this.state.region} style={styles.container}>
+                        <Marker
+                            title={'Hope For Life'}
+                            description={'Key Population Uganda'}
+                            coordinate={{
+                                latitude: this.state.region.latitude,
+                                longitude: this.state.region.longitude
+                            }}
+                        />
+                    </MapView>
                 </SafeAreaView>
         )
     };

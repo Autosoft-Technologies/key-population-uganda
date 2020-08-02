@@ -3,16 +3,16 @@ import {
     StyleSheet,
     View,
     ScrollView,
-    ActivityIndicator
+    ActivityIndicator,
+    Text,
+    Image,
+    Dimensions,
 } from "react-native";
 import Colors from "react-native/Libraries/NewAppScreen/components/Colors";
 import BlogComponent from "../components/BlogComponent";
 
-
 export default class Blogs extends React.Component {
 
-    // state = this.props.route;
-    // state = {blogs: [], isLoaded: false};
     state = {blogs: [], isLoaded: false, url: 'https://www.ngxuganda.com/KPU/wp-json/wp/v2/posts?_embed&per_page=100&categories=6'};
 
     fetchData = async () => {
@@ -29,7 +29,14 @@ export default class Blogs extends React.Component {
     }
 
     openBlog = (blog) => {
-        this.props.navigation.navigate('Details', blog);
+        this.props.navigation.navigate('EventDetailScreen',
+            {
+                immage: blog.better_featured_image.source_url,
+                title: blog.title.rendered,
+                description: blog.excerpt.rendered,
+                link: blog.link,
+                pubDate: blog.date,
+            });
     }
 
     render() {

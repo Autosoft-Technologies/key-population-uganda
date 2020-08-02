@@ -13,19 +13,19 @@ import HomeNav from "../navigation/HomeNav";
 
 const data = [
     {
-        title: 'Read our posts online',
+        title: 'Free medical advice',
         image: require('../../assets/1.png'),
-        bg: '#d42329',
+        bg: '#9e0b0f',
     },
     {
-        title: 'Watch our videos',
+        title: 'Access to healthy centres',
         image: require('../../assets/2.png'),
-        bg: '#eca602',
+        bg: '#cc161d',
     },
     {
-        title: 'Listen to our Soundcloud',
+        title: 'Automate your schedules',
         image: require('../../assets/one.jpg'),
-        bg: '#5fc0d6',
+        bg: '#9e0b0f',
     },
 ];
 

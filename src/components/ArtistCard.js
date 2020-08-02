@@ -9,16 +9,16 @@ export default function ArtistCard(props) {
     <View style={styles.card_container}>
         <View style={styles.avatar_container}>
             <Image 
-                source={require('../../assets/images/avatars/avatar-f.png')} 
+                source={require('../../assets/images/avatars/icons8-user-100.png')}
                 style={styles.avatar}/>
         </View>
         <View style={styles.content_container}>
             <View style={styles.profile_info}>
                 <Text style={[appStyles.font_bold, {padding: 3}]}>{props.name}</Text>
-                <Text style={[appStyles.gray, {padding: 3}]}>{props.name}</Text>
+                <Text style={[appStyles.gray, {padding: 3}]}>{props.place}</Text>
             </View>
             <View style={styles.action_container}>
-                <Text style={{alignItems: 'flex-end', color: Colors.pinkColor}}>On Tour</Text>
+                <Text style={{alignItems: 'flex-end', color: Colors.pinkColor}}>Available</Text>
             </View>
         </View>
     </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         width: 70,
         height: 70,
         borderRadius: 70,
-        borderColor: Colors.pinkColor,
+        // borderColor: Colors.pinkColor,
         borderWidth: 1,
     },
     content_container: {

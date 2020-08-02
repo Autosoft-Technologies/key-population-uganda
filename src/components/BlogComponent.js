@@ -53,7 +53,7 @@ export default class BlogComponent extends Component {
 const styles = StyleSheet.create({
     container: {
         marginBottom: 20,
-        height: 350,
+        height: 300,
         alignSelf: 'stretch',
         paddingBottom: 20,
         borderBottomColor: '#cccccc',

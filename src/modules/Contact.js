@@ -7,18 +7,10 @@ import {
     StyleSheet,
     Text,
     View,
-    TouchableOpacity, SafeAreaView,
+    TouchableOpacity,
+    SafeAreaView,
 } from 'react-native'
 import MapView, {Marker} from 'react-native-maps';
-// import Map from "./Map";
-
-
-const region = {
-    latitude: 0.347947,
-    longitude: 32.662294,
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421
-}
 
 class Contact extends Component {
     state = {

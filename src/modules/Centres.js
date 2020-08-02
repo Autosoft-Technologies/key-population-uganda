@@ -11,7 +11,6 @@ import healthyCenters from '../data/centres';
 
 export default class Centres extends Component {
 
-
     state = {
         initialRegion: {
             latitude: 0.3210737,
@@ -69,13 +68,13 @@ export default class Centres extends Component {
 
     render() {
         return (
-            <View style={{flex: 1}}>
-                <View style={{flex: 1, flexDirection: 'row'}}>
-                    <MapView initialRegion={this.state.initialRegion} style={styles.container}>
-                        {this._generateMarkers()}
-                    </MapView>
-                </View>
+
+            <View style={{flex: 1, flexDirection: 'row'}}>
+                <MapView initialRegion={this.state.initialRegion} style={styles.container}>
+                    {this._generateMarkers()}
+                </MapView>
             </View>
+
         )
     }
 }

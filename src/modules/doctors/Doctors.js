@@ -1,87 +1,97 @@
-import React, {Component} from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    Image,
-    TouchableOpacity,
-    ScrollView
-} from 'react-native';
-import contactData from '../../data/contact.json'
+import React from 'react';
+import { SafeAreaView, FlatList, ScrollView, Image, Text, View, TouchableOpacity, TextInput, Alert, KeyboardAvoidingView, Button } from 'react-native';
+import Colors from '../../constants/Colors';
+import ArtistCard from '../../components/ArtistCard';
 
-export default class Doctors extends Component {
+const DATA = [
+    {
+        id: '1',
+        name: 'Dr chris',
+        place: 'Mulago Hospital',
+        open_at: '24 JUN'
+    },
+    {
+        id: '2',
+        name: 'Dr chris',
+        place: 'Mulago Hospital',
+        open_at: '24 JUN'
+    },
+    {
+        id: '3',
+        name: 'Dr chris',
+        place: 'Mulago Hospital',
+        open_at: '24 JUN'
+    },
+    {
+        id: '4',
+        name: 'Dr chris',
+        place: 'Mulago Hospital',
+        open_at: '24 JUN'
+    },
+    {
+        id: '5',
+        name: 'Dr chris',
+        place: 'Mulago Hospital',
+        open_at: '24 JUN'
+    },
+    {
+        id: '6',
+        name: 'Dr chris',
+        place: 'Mulago Hospital',
+        open_at: '24 JUN'
+    },
+    {
+        id: '7',
+        name: 'Dr chris',
+        place: 'Mulago Hospital',
+        open_at: '24 JUN'
+    },
+    {
+        id: '8',
+        name: 'Dr chris',
+        place: 'Mulago Hospital',
+        open_at: '24 JUN'
+    }
+];
 
-    state = {data: contactData};
+class Doctors extends React.Component {
+    constructor(props) {
+        super(props);
 
+        this.state = {
+
+        }
+    }
+
+    // === === //
     render() {
         return (
-            <ScrollView>
-                <View style={styles.container}>
-                            <Text style={styles.name}>Doctors</Text>
-                </View>
-            </ScrollView>
+            <SafeAreaView style={{flex: 1}}>
+                <FlatList
+                    style={{flex: 1}}
+                    data={DATA}
+                    renderItem={({item, index, separators}) => (
+                        <TouchableOpacity
+                            style={{borderColor: Colors.lightGrayColor, borderBottomWidth: 1}}
+                            onPress={() => alert('Disabled. Being finalised')}
+                        >
+                            <ArtistCard name={item.name} place={item.place} open_at={item.open_at} />
+                        </TouchableOpacity>
+                    )}
+                    keyExtractor={item => item.id}
+                />
+                <TouchableOpacity
+                    style={{position: 'absolute', right: 5, bottom: 5}}
+                    onPress={() => alert('Disabled. Being finalised')}
+                >
+                    <Image
+                        source={require('../../../assets/images/icons/circle-plus-red.png')}
+                        style={{width: 60, height: 60}}
+                    />
+                </TouchableOpacity>
+            </SafeAreaView>
         );
     }
 }
 
-const styles = StyleSheet.create({
-    header: {
-        backgroundColor: "#663399",
-        height: 200,
-    },
-    headerBackgroundImage: {
-        paddingBottom: 0,
-        height: 200,
-    },
-    avatar: {
-        width: 130,
-        height: 130,
-        borderRadius: 63,
-        borderWidth: 4,
-        borderColor: "white",
-        marginBottom: 10,
-        alignSelf: 'center',
-        position: 'absolute',
-        marginTop: 130
-    },
-    name1: {
-        fontSize: 22,
-        color: "#FFFFFF",
-        fontWeight: '600',
-    },
-    body: {
-        marginTop: 40,
-    },
-    bodyContent: {
-        flex: 1,
-        alignItems: 'center',
-        padding: 30,
-    },
-    name: {
-        fontSize: 28,
-        color: "#696969",
-        fontWeight: "600"
-    },
-    info: {
-        fontSize: 16,
-        color: "#663399",
-        marginTop: 10
-    },
-    description: {
-        fontSize: 16,
-        color: "#696969",
-        marginTop: 10,
-        textAlign: 'center'
-    },
-    buttonContainer: {
-        marginTop: 10,
-        height: 45,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 20,
-        width: 250,
-        borderRadius: 30,
-        backgroundColor: "#663399",
-    },
-});
+export default Doctors;
